@@ -22,6 +22,7 @@ class ProductTables extends Migration
 
         Schema::create('skus', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('size')->nullable();
             $table->string('color')->nullble();
             $table->float('price', 8, 2);

@@ -10,6 +10,8 @@ window.Vue = require('vue').default;
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
+import router from './router'
+
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -40,4 +42,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    router
 });
