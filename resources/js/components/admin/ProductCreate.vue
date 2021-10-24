@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div>
-    <b-form @submit="onSubmit">
+    <b-form @submit.prevent ="onSubmit">
       <b-form-group
         id="input-group-1"
         label="Product Name:"
@@ -22,7 +22,7 @@
       >
         <b-form-textarea
         id="textarea"
-        v-model="text"
+        v-model="product.description"
         placeholder="Description"
         rows="3"
         max-rows="6"
@@ -45,7 +45,9 @@
           }
         },
         methods: {
-            onSubmit(){
+           async  onSubmit(){
+            let  res = await axios.post('/api/admin/product', this.product);
+             console.log(rest);
 
             }
         }

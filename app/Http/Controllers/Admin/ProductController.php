@@ -15,4 +15,8 @@ class ProductController extends Controller
         return response()->json(['data' => $product]);
 
     }
+
+    public function index(){
+        return response()->json(['data' => Product::all()]);
+    }
 }

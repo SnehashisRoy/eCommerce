@@ -10,7 +10,9 @@ window.Vue = require('vue').default;
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-import router from './router'
+import router from './router';
+
+import store from './store';
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -41,5 +43,6 @@ Vue.use(IconsPlugin)
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store
 });
